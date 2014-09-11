@@ -7,7 +7,13 @@ angular.module('curates', [
   'curates.createCollection',
   'curates.singleCollection',
   'curates.editCollection',
+<<<<<<< HEAD
   'curates.collectionFactory'
+=======
+  'curates.services',
+  'curates.collectionFactory',
+  'ui.bootstrap'
+>>>>>>> Optimized list title on the list view page.  /media-query
 ])
 
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
@@ -24,6 +30,7 @@ angular.module('curates', [
   		controller: 'AuthController'
   	});
 
+<<<<<<< HEAD
   	$urlRouterProvider.otherwise('/');
 
   	$httpProvider.interceptors.push('AttachTokens');
@@ -54,3 +61,6 @@ angular.module('curates', [
 		}
 	});
 });
+=======
+});
+>>>>>>> Optimized list title on the list view page.  /media-query

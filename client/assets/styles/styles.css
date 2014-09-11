@@ -172,7 +172,7 @@ body {
   line-height: 1.38;
   text-align: center;
   color: rgb(255, 255, 255);
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .collection-select {
@@ -195,7 +195,7 @@ body {
   width: 99.9936202111%;
   min-height: 2.125rem;
   color: rgb(255, 255, 255);
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .collection-text-select {
@@ -1318,7 +1318,7 @@ body {
 
   .collections-search ._input {
     width: 66.3945578231%;
-    margin-top: 0.875rem;
+    margin-top: 0.95rem;
     margin-left: 0.27211%;
   }
 
@@ -1368,3 +1368,22 @@ body {
     margin-left: 3.03734%;
   }
 }
+
+  .modal-header {
+    color: black;
+  }
+
+  .modal-body {
+    color: black;
+  }
+
+  .loggedIn {
+    margin-left: 8%;
+    width: 147%;
+  }
+
+  .signin ._button {
+    width: 45.104651%;
+    margin-left: 29.02398%;
+  }
+/*Was the trailing curly brace neccessary? there was a '}' here*/
