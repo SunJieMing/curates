@@ -1,12 +1,38 @@
 <div ng-controller="singleCollectionController">
   <div class="select-collection select-collection-1 clearfix">
     <a ng-href="#/{{ collection.url }}/edit" ng-if="isUser"><button class="edit-btn" ng-if="isUser">Edit</button></a>
+
+ 
+  <div class="single-collection-votes-user clearfix">
+    <div class="votes-box clearfix">
+      <p class="single-collection-votes-text">
+        <span>{{collection.stars}}</span>
+      </p>
+      <p class="vote-num">
+        <span>votes</span>
+      </p>
+    </div>
+  </div>
+
     <p class="collection-title-text"><span>{{ collection.title }}</span></p>
     <p class="collection-description-text">{{ collection.description }}</p>
+
+
+
     <div class="btn-container clearfix">
       <button class="clone-btn" ng-if="!isUser" ng-click="clone()">Clone</button>
-      <button class="upvote-btn" ng-click="upVote()" ng-if="notYetUpvoted">Upvote</button>
-      <span class="link-description-text" style="margin-top: .5rem;" ng-if="!notYetUpvoted">Liked!</span>
+          <img src="assets/images/thumb_up.png"
+                 style="width:16px;height:16px;"
+                 ng-click="upVote()" 
+                 ng-if="notYetUpvoted">
+          </img>
+            <img src="assets/images/thumb_down.png"
+                 style="width:16px;height:16px"
+                 ng-click="downVote()" 
+                 ng-if="notYetUpvoted">
+          </img>
+<!--           <button class="upvote-btn" ng-click="upVote()" ng-if="notYetUpvoted">Upvote</button>
+ -->      <span class="link-description-text" style="margin-top: .5rem;" ng-if="!notYetUpvoted">Voted!</span>
     </div>
   </div>
   <div class="single-link" ng-repeat="link in collection.links">
@@ -34,16 +60,20 @@
         <p class="link-description-text">{{ link.description }}</p>
 
         <!-- upvote button -->
-        <div class="link-btn-container clearfix">
-          <button class="upvote-btn" 
-                  ng-click="upVoteLink($parent.$index)" 
-                  ng-if="notYetUpvoted">
-            Upvote
-          </button>
+        <div class="link-btn-container">
+          <img src="assets/images/thumb_up.png"
+                 style="width:16px;height:16px;"
+                 ng-click="upVoteLink($parent.$index)" 
+                 ng-if="!link.voted">
+          </img>
+            <img src="assets/images/thumb_down.png"
+                 style="width:16px;height:16px"
+                 ng-click="downVoteLink($parent.$index)" 
+                 ng-if="!link.voted">
+          </img>
           <span class="link-description-text" 
-                style="margin-top: .5rem;" 
-                ng-if="!notYetUpvoted">
-            Liked!
+                ng-if="link.voted">
+            Voted!
           </span>
         </div>
         <!-- upvote button -->

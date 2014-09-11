@@ -28,13 +28,27 @@ angular.module('curates.singleCollection', [])
     collectionFactory.updateCollection($scope.collection);
     $scope.notYetUpvoted = false;
   };
-  
+
+  $scope.downVote = function() {
+    $scope.collection.stars--;
+    collectionFactory.updateCollection($scope.collection);
+    $scope.notYetUpvoted = false;
+  };
+
   $scope.upVoteLink = function(index) {
     $scope.collection.links[index].stars++;
     console.log($scope.collection.links);
     collectionFactory.updateCollection($scope.collection);
-    $scope.collection.links[index].notYetUpvoted = false;
+    $scope.collection.links[index].voted = true;
   };
+
+  $scope.downVoteLink = function(index) {
+    $scope.collection.links[index].stars--;
+    console.log($scope.collection.links);
+    collectionFactory.updateCollection($scope.collection);
+    $scope.collection.links[index].voted = true;
+  };
+
   
   $scope.clone = function() {
     $state.go('createCollection', {
