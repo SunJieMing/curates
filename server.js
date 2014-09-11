@@ -27,6 +27,7 @@ app.use(express.static(__dirname + '/client'));
 app.post('/api/collection/create', function(req, res) {
   mongo.create(req.body).then(function(collection) {
     res.statusCode = 201;
+    res.header('Content-Type', "application/json");
     res.end(JSON.stringify(collection));
   });
 });
@@ -35,6 +36,7 @@ app.post('/api/collection/create', function(req, res) {
 // responds with the updated collection
 app.post('/api/collection/update', function(req, res) {
   mongo.update(req.body).then(function(collection) {
+    res.header('Content-Type', "application/json");
     res.end(JSON.stringify(collection));
   });
 });
@@ -42,6 +44,7 @@ app.post('/api/collection/update', function(req, res) {
 // add a link to collection
 app.post('/api/collection/addlink', function(req, res) {
   mongo.addLink(req.body).then(function(collection) {
+    res.header('Content-Type', "application/json");
     res.end(JSON.stringify(collection));
   });
 });
@@ -52,6 +55,7 @@ app.post('/api/collection/addlink', function(req, res) {
 // responds with the collection, updated or not
 app.post('/api/collection/addStar', function(req, res) {
   mongo.addStar(req.body).then(function(collection) {
+    res.header('Content-Type', "application/json");
     res.end(JSON.stringify(collection));
   });
 });
@@ -59,6 +63,7 @@ app.post('/api/collection/addStar', function(req, res) {
 // retrieve a collection by url
 app.get('/api/collection/:url', function(req, res) {
   mongo.findByUrl(req.params.url).then(function(collection) {
+    res.header('Content-Type', "application/json");
     res.end(JSON.stringify(collection));
   });
 });
@@ -70,6 +75,7 @@ app.get('/api/user/:userProvider/:userId', function(req, res) {
     id: req.params.userId
   };
   mongo.getUserCollections(user).then(function(collections) {
+    res.header('Content-Type', "application/json");
     res.end(JSON.stringify(collections));
   });
 });
@@ -77,6 +83,7 @@ app.get('/api/user/:userProvider/:userId', function(req, res) {
 // retrieve the meta data for all collections
 app.get('/api/all', function(req, res) {
   mongo.getAllCollections().then(function(collections) {
+    res.header('Content-Type', "application/json");
     res.end(JSON.stringify(collections));
   });
 });
