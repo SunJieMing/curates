@@ -2,15 +2,37 @@
   <div class="notLoggedIn" ng-if="!loggedIn">
     <form id="signin" ng-submit="login(name)">
 <!--       <input class="_input" placeholder="Username" type="text" ng-model="name" name="username">
- -->      <button class="_button" type="submit" name="submit">Sign In</button>
-    </form>
-  </div>
-  <div class="loggedIn" ng-if="loggedIn">
-    <form id="logout" ng-submit="logout()">
-      Welcome {{ user.givenName }}!!
-      <button type="submit" name="submit">Log Out</button>
-    </form>
-    <a ng-href="#/create">Create New</a> &nbsp;&nbsp;&nbsp;
-    <a ui-sref="myCollections">Your Collections</a><br />
-  </div>
+-->      
+
+<div ng-controller="ModalDemoCtrl">
+ <script type="text/ng-template" id="myModalContent.html">
+ <div class="modal-header">
+ <h3 class="modal-title">Login</h3>
+ </div>
+ <div class="modal-body">
+  <p>Login with Facebook!</p>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-primary" ng-click="ok()">OK</button>
+ <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+ </div>
+ </script>
+
+ <button class="_button" type="submit" name="submit" ng-click="open()">Sign In</button>
+ <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div>
+
+</form>
+
+
+<!--     PUT THE MODAL IN HERE!!! -->  
+</div>
+<div class="loggedIn" ng-if="loggedIn">
+  <form id="logout" ng-submit="logout()">
+    Welcome {{ user.givenName }}!!
+    <button type="submit" name="submit">Log Out</button>
+  </form>
+  <a ng-href="#/create">Create New</a> &nbsp;&nbsp;&nbsp;
+  <a ui-sref="myCollections">Your Collections</a><br />
+</div>
 </div>

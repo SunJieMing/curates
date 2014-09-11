@@ -6,12 +6,11 @@ angular.module('curates', [
   'curates.singleCollection',
   'curates.editCollection',
   'curates.services',
-  'curates.collectionFactory'
+  'curates.collectionFactory',
+  'ui.bootstrap'
 ])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
-
-
 
 });
