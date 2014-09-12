@@ -7,7 +7,6 @@ angular.module('curates', [
   'curates.createCollection',
   'curates.singleCollection',
   'curates.editCollection',
-  'curates.services',
   'curates.collectionFactory',
   'ui.bootstrap'
 ])
