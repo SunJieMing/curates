@@ -7,8 +7,10 @@ angular.module('curates.collectionsList', [])
       templateUrl: 'modules/collectionsList/collectionsList.html'
     });
 })
-  .controller('collectionsListController', function($scope, collectionFactory) {
+  .controller('collectionsListController', function($scope, collectionFactory, $rootScope) {
     // Initialize empty array to hold collection on scope
+    $scope.user = $rootScope.user;
+    $scope.loggedIn = $rootScope.loggedIn;
     $scope.listData = [];
     // Initialize search filter string used in ng-repeat orderBy filter   
     $scope.predicate = '-stars';

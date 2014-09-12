@@ -1,3 +1,7 @@
+<nav class="navbar"></nav>
+  <p class="logotext logotext-1"><a ng-href='/'><span>Curates</span></a></p>
+ <button class= ng-if="loggedIn" ng-show="loggedIn">Welcome {{user}}!</button>
+ <button class= ng-if="!loggedIn" ng-show="!loggedIn"><a href="#/signin">Sign In Here!</button></a>
 <div ng-controller="collectionsListController">
   <div class="collections-search clearfix">
     <button class="_button">Search</button>
