@@ -7,13 +7,12 @@ angular.module('curates', [
   'curates.createCollection',
   'curates.singleCollection',
   'curates.editCollection',
-  'curates.services',
+  // 'curates.services',
   'curates.collectionFactory',
   'ui.bootstrap'
 ])
 
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-  // $urlRouterProvider.otherwise('/');
   $stateProvider
   	.state('/signin', {
   		url: '/signin',
