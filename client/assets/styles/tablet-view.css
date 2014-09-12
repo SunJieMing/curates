@@ -4,6 +4,11 @@
 a {
   font-size: 80%;
 }
+.single-link .box {
+  height: 8rem;
+  width 600%;
+  margin
+}
 span {
   font-size: 80%;
 }
@@ -25,7 +30,7 @@ span {
   margin-left: 18.66146%;
   height: 10rem;
 }
-.btn-container .clone-btn, 
+.btn-container .clone-btn,
 .btn-container .upvote-btn {
   width: 57px;
   display: inline;
@@ -39,4 +44,18 @@ span {
   width: 100px;
   margin-left: 43%;
   position: static;
+
+}
+.collection-description-text {
+  overflow: scroll;
+  height: 4rem;
+}
+
+.link-title-text span.ng-binding {
+  font-size: 110%;
+
+}
+
+p.link-description-text.ng-binding {
+  font-size: 100%;
 }
