@@ -80,6 +80,120 @@ body {
   height: 3.5rem;
 }
 
+.link-btn-container {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 7;
+  width: 60px;
+  height: 3.5rem;
+}
+
+.link-btn-container .upvote-btn {
+  width: 134.2857142857%;
+  margin-left: -21.38393%;
+}
+
+
+
+.single-collection-votes-user {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 14;
+  width: 15.8200385694%;
+  height: 5.563rem;
+  margin-top: 1px;
+}
+
+.single-collection-votes-text {
+  position: relative;
+  float: left;
+  z-index: 10;
+  width: 100.1341081805%;
+  min-height: 2.313rem;
+  margin: 0.313rem 0 0 -0.15646%;
+  font: 400 1.875rem/1.38 Arial;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-top: 3px;
+  margin-bottom: -5px;
+}
+
+.single-collection-votes-text span {
+  font-size: 1.25rem;
+  color: rgb(254, 254, 254);
+}
+
+.link-vote-container {
+
+}
+
+.link-votes-user {
+  position: relative;
+  float: right;
+  clear: both;
+  z-index: 14;
+  width: 15.8200385694%;
+  height: 5.563rem;
+  margin-top: -7.75rem;
+  right: 0;
+}
+
+.link-votes-box {
+  width: 61.9753428452%;
+  height: 3.313rem;
+  margin: 1.563rem auto 0;
+  border-radius: 0.625rem;
+  background-color: rgb(43, 62, 80);
+}
+
+.link-votes-text {
+  position: relative;
+  float: left;
+  z-index: 10;
+  width: 100.1341081805%;
+  min-height: 2.313rem;
+  margin: 0.313rem 0 0 -0.15646%;
+  font: 400 1.875rem/1.38 Arial;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.link-votes-text span {
+  font-size: 1.25rem;
+  color: rgb(254, 254, 254);
+}
+
+.link-votes-text-select {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 100.1341081805%;
+  min-height: 2.313rem;
+  margin: 0.125rem 0 0 -0.12121%;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.link-vote-num {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 12;
+  width: 100.1341081805%;
+  margin: -0.937rem 0 0 -0.15646%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(254, 254, 254);
+}
+
+
 .checkbox {
   display: block;
   float: left;
