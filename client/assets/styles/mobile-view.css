@@ -118,7 +118,8 @@
 }
 .scnshot-container .box {
   position: relative;
-  width: 750.284427%;
+  width: 805.284427%;
+  margin-left: -106%;
 }
 .link .box {
   height: 8.188rem;
@@ -130,5 +131,24 @@
   margin-top: -6.8812rem;
 }
 .scnshot-container .screenshot {
-  margin-left: -52.27413%;
+  margin-left: -71.27413%;
+}
+.link-votes-user {
+  width: 25.820039%;
+  right: -47;
+  top: 4;
+}
+.link-votes-box {
+  width: 69.975343%;
+  margin-left: 16.5%;
+}
+.link-btn-container {
+  right: -68;
+  margin-top: .5rem;
+  height: 50%;
+}
+.btn-container .link-description-text {
+  float: none;
+  overflow: scroll;
+  width: 50px;
 }

@@ -30,7 +30,7 @@
       ng-if="notYetUpvoted">
     </img>
 
-    <span class="link-description-text" style="margin-top: .5rem;" ng-if="!notYetUpvoted">Voted!</span>
+    <span class="link-description-text" ng-if="!notYetUpvoted">Voted!</span>
   </div>
   </div>
   <div class="single-link" ng-repeat="link in collection.links">
