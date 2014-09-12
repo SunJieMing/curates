@@ -23,7 +23,7 @@ angular.module('curates', [
   		url: '/signup',
   		templateUrl: 'services/auth/signup.html',
   		controller: 'AuthController'
-  	});
+  	})
 
   	$urlRouterProvider.otherwise('/');
 

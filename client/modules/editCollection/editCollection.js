@@ -8,10 +8,11 @@ angular.module('curates.editCollection', [])
   });
 })
 
-.controller('editCollectionController', function($scope, $stateParams, $state, Auth, collectionFactory) {
+.controller('editCollectionController', function($scope, $stateParams, $state, Auth, collectionFactory, $rootScope) {
   // Initialize scope variables
   $scope.editable = false;
   $scope.toRemove = [];
+  $scope.loggedIn = $rootScope.loggedIn;
 
   // Retrieve collection
   collectionFactory.getCollection($stateParams.collectionUrl).then(function(collection) {

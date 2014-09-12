@@ -8,7 +8,8 @@ angular.module('curates.singleCollection', [])
   })
 })
 
-.controller('singleCollectionController', function($scope, $state, $stateParams, collectionFactory, Auth) {
+.controller('singleCollectionController', function($scope, $state, $stateParams, collectionFactory, Auth, $rootScope) {
+  $scope.user = $rootScope.user;
   var url = $stateParams.url;
   $scope.notYetUpvoted = true;
   $scope.collection = {};

@@ -8,9 +8,10 @@ angular.module('curates.myCollections', [])
   });
 })
 
-.controller('myCollectionsController', function($scope, $stateParams, collectionFactory, Auth) {
+.controller('myCollectionsController', function($scope, $stateParams, collectionFactory, Auth, $rootScope) {
   var user = Auth.user;
   $scope.collections = [];
+  $scope.loggedIn = $rootScope.loggedIn;
 
   collectionFactory.getUserCollections(user).then(function(collections) {
     $scope.collections = collections;

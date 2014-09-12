@@ -1,12 +1,17 @@
 angular.module('curates.auth', [])
 
-.controller('AuthController', function ($scope, $window, $location, Auth) {
+.controller('AuthController', function ($scope, $window, $location, Auth, $rootScope) {
   $scope.user = {};
   $scope.error;
+  $rootScope.loggedIn = false;
+  $rootScope.user;
 
   $scope.signin = function() {
+   $rootScope.user = $scope.user.username;
    Auth.signin($scope.user)
       .then(function (token) {
+        $rootScope.loggedIn = true;
+        console.log('from authcontroller rootscope', $rootScope.loggedIn);
         $window.localStorage.setItem('com.curates', token);
         $location.path('/');
       })
