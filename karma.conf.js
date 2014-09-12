@@ -1,7 +1,7 @@
 module.exports = function(config) {
 
   var hostname = process.env.WERCKER_PHANTOMJS_HOST || 'localhost'; 
-  var port = process.env.WERCKER_PHANTOMJS_PORT || 9100;
+  var port = process.env.WERCKER_PHANTOMJS_PORT || 3000;
 
   config.set({
     basepath: '',

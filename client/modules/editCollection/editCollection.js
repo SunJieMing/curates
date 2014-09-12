@@ -8,7 +8,7 @@ angular.module('curates.editCollection', [])
   });
 })
 
-.controller('editCollectionController', function($scope, $stateParams, $state, userManagement, collectionFactory) {
+.controller('editCollectionController', function($scope, $stateParams, $state, Auth, collectionFactory) {
   // Initialize scope variables
   $scope.editable = false;
   $scope.toRemove = [];
@@ -16,7 +16,7 @@ angular.module('curates.editCollection', [])
   // Retrieve collection
   collectionFactory.getCollection($stateParams.collectionUrl).then(function(collection) {
     // Check that this is the current users collection
-    if (userManagement.validateUser(collection.user)) {
+    if (Auth.validateUser(collection.user)) {
       $scope.editable = true;
       $scope.collection = collection;
     }
