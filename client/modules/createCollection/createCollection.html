@@ -1,11 +1,9 @@
 <nav class="navbar"></nav>
   <p class="logotext logotext-1"><a ng-href='/'><span>Curates</span></a></p>
-   <button class= ng-if="!loggedIn" ng-show="!loggedIn"><a href="#/signin">Sign In Here!</button></a>
 <div ng-controller="createCollectionController">
-  <div class="notLoggedIn" ng-if="!loggedIn">
-    <h2 class="login-to-use">Log in to create a collection.</h2>
+  
   </div>
-  <div class="createCollection" ng-if="loggedIn">
+  <div class="createCollection">
     <form name="create" class="createCollectionForm" ng-submit="submitCreate()">
 
       <div class="create-collection-name clearfix">
