@@ -1,106 +1,12 @@
-<html>
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0">
-<title>Curates</title>
-<link href="http://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="assets/styles/standardize.css">
-<link rel="stylesheet" href="assets/styles/linkview-grid.css">
-<link rel="stylesheet" href="assets/styles/styles.css">
-<meta name="viewport" content="width=device-width"/>
-
-  <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px)" href="assets/styles/mobile-view.css">
-
-  <link rel="stylesheet" type="text/css" media="only screen and (min-width: 481px) and (max-width: 1024px)" href="assets/styles/tablet-view.css">
-
-<body ng-app="curates" class="body index clearfix">
-
-  <div id="fb-root"></div>
-  <script>
-    // This is called with the results from from FB.getLoginStatus().
-    function statusChangeCallback(response) {
-      console.log('statusChangeCallback');
-      console.log(response);
-      // The response object is returned with a status field that lets the
-      // app know the current login status of the person.
-      // Full docs on the response object can be found in the documentation
-      // for FB.getLoginStatus().
-      if (response.status === 'connected') {
-        // Logged into your app and Facebook.
-        testAPI();
-      } else if (response.status === 'not_authorized') {
-        // The person is logged into Facebook, but not your app.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into this app.';
-      } else {
-        // The person is not logged into Facebook, so we're not sure if
-        // they are logged into this app or not.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into Facebook.';
-      }
-    }
-
-    // This function is called when someone finishes with the Login
-    // Button.  See the onlogin handler attached to it in the sample
-    // code below.
-    function checkLoginState() {
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-      });
-    }
-
-    window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '355043514650515',
-      cookie     : true,  // enable cookies to allow the server to access
-                          // the session
-      xfbml      : true,  // parse social plugins on this page
-      version    : 'v2.1' // use version 2.1
-    });
-
-    // Now that we've initialized the JavaScript SDK, we call
-    // FB.getLoginStatus().  This function gets the state of the
-    // person visiting this page and can return one of three states to
-    // the callback you provide.  They can be:
-    //
-    // 1. Logged into your app ('connected')
-    // 2. Logged into Facebook, but not your app ('not_authorized')
-    // 3. Not logged into Facebook and can't tell if they are logged into
-    //    your app or not.
-    //
-    // These three cases are handled in the callback function.
-
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-
-    };
-
-    // Load the SDK asynchronously
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    // Here we run a very simple test of the Graph API after login is
-    // successful.  See statusChangeCallback() for when this call is made.
-    function testAPI() {
-      console.log('Welcome!  Fetching your information.... ');
-      FB.api('/me', function(response) {
-        console.log('Facebook Response: ', response);
-        console.log('Successful login for: ' + response.name);
-        document.getElementById('status').innerHTML =
-          'Thanks for logging in, ' + response.name + '!';
-      });
-    }
-  </script>
-  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-  </fb:login-button>
-
-  <div id="status">
-  </div>
+<html ng-app="curates">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Curates</title>
+  <link href="http://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="assets/styles/standardize.css">
+  <link rel="stylesheet" href="assets/styles/linkview-grid.css">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+  <body class="body index clearfix">
   <script src="lib/underscore/underscore.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
@@ -108,22 +14,18 @@
   <script src="modules/singleCollection/singleCollection.js"></script>
   <script src="modules/collectionsList/collectionsList.js"></script>
   <script src="modules/editCollection/editCollection.js"></script>
+  <script src="modules/createCollection/createCollection.js"></script>
   <script src="app.js"></script>
-  <script src="services/userManagement.js"></script>
+  <script src="directives/collectionMeta.js"></script>
   <script src="directives/userManagement.js"></script>
   <script src="services/collectionFactory.js"></script>
-  <script src="directives/collectionMeta.js"></script>
-  <script src="modules/createCollection/createCollection.js"></script>
-
+  <script src="services/auth/userManagementController.js"></script>
+  <script src="services/auth/userManagementFactory.js"></script>
   <nav class="navbar"></nav>
-
   <p class="logotext logotext-1"><a ng-href='/'><span>Curates</span></a></p>
-  <div class="signin clearfix" ng-controller="userManagementController">
-    <user-management />
+  <div ng-controller="AuthController">
   </div>
-<!--   <div ng-controller="userManagementController">
-    <user-management />
-  </div> -->
+  <div ng-view></div>
   <div ui-view></div>
 </body>
 </html>

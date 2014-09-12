@@ -1,0 +1,17 @@
+<div id='signin'>
+  <form name="signinForm" ng-submit='signin()'>
+    <input type='text'ng-model='user.username' placeholder='Username'>
+    <br>
+    <br>
+    <input type="password" ng-model='user.password' placeholder='Password'>
+    <br>
+    <div id='signin-error'>
+    	{{error}}
+    </div>
+    <br>
+    <button>Sign In</button>
+  </form>
+  <br>
+  <br>
+  <a href="#/signup">Don't have an account? Sign up!</a>
+</div>

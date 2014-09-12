@@ -40,11 +40,7 @@ var collectionSchema = new mongoose.Schema({
   links: [{
     url: String,
     title: String,
-    description: String,
-    stars: {
-      type: Number,
-      default: 0
-    }
+    description: String
   }],
   userStars: {
     type: [],

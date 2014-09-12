@@ -16,9 +16,8 @@ describe('GET /api/all', function(){
     request(app)
     .get('/api/all')
     .set('Accept', 'application/json')
-    .expect('Content-Type', /json/)
     .expect(function(res) {
-      //console.log(res.body);
+      console.log(res.body);
     })
     .expect(200, done);
   });
@@ -58,7 +57,6 @@ describe('POST /api/collection/create', function(){
     request(app)
     .post('/api/collection/create')
     .send(newCollection)
-    .expect('Content-Type', /json/)
     .expect(hasTitleLinksDescription)
     .expect(201, done);
   })
@@ -70,7 +68,6 @@ describe('POST /api/collection/update', function(){
     request(app)
     .post('/api/collection/update')
     .send(newCollection)
-    .expect('Content-Type', /json/)
     .expect(function (res) {
       var response = JSON.parse(res.text);
       if (!(response.description && response.description === newCollection.description)) return "should return updated Collection with modified description";
@@ -94,8 +91,7 @@ describe('POST /api/collection/addlink', function(){
       }
       ]
     })
-  .expect('Content-Type', /json/)
-  .expect(function (res) {
+    .expect(function (res) {
       var response = JSON.parse(res.text);
       var linkTotal = response.links.length - 1;
       if (!(response.links[linkTotal].description && response.links[linkTotal].description === 'Yay')) return "should return updated Collection with modified link description";
@@ -108,7 +104,6 @@ describe('GET /api/collection/:collectionUrl', function(){
   it('respond with json collection found by collection url', function(done){
     request(app)
     .get('/api/collection/'+newCollection.url)
-    .expect('Content-Type', /json/)
     .expect(function (res) {
       var response = JSON.parse(res.text);
       if (!(response._id && response._id === newCollection._id)) return "should return created Collection";
@@ -121,7 +116,6 @@ describe('GET /api/user/:userProvider/:userId', function(){
   it('respond with json all collections by user.id', function(done){
     request(app)
     .get('/api/user/'+newCollection.user.provider+'/'+newCollection.user.id)
-    .expect('Content-Type', /json/)
     .expect(function (res) {
       var response = JSON.parse(res.text);
       if (!(response.length && response[0].user.id === newCollection.user.id)) return "should return collections created by user";
@@ -134,7 +128,6 @@ describe('GET /api/user/NoSuchProvider/NonExistentUser', function(){
   it('respond with json empty array', function(done){
     request(app)
     .get('/api/user/NoSuchProvider/NonExistentUser')
-    .expect('Content-Type', /json/)
     .expect(function (res) {
       if (!(res.text && res.text === '[]')) return "should return empty array for NonExistentUser";
     })
