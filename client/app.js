@@ -12,7 +12,6 @@ angular.module('curates', [
 ])
 
 .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-  // $urlRouterProvider.otherwise('/');
   $stateProvider
   	.state('/signin', {
   		url: '/signin',

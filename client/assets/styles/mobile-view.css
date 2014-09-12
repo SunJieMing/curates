@@ -1,5 +1,3 @@
-.index {
-}
 .collections-search {
   margin: 0;
   float: none;
@@ -30,17 +28,11 @@
 }
 .signin {
   margin-left: 23%;
-/*  left: 18rem;
-  top: 5rem;*/
 }
 #signin ._button {
   width: 9rem;
   margin-left: -36.97602%;
   margin-top: -1.8rem;
-/*  position: relative;
-  left: -17.59rem;
-  top: -0.9rem;
-  margin-left: 2%;*/
 }
 .single-collection {
   width: 130.5%;
@@ -82,14 +74,12 @@
 .select-collection {
   margin-top: 0.188rem;
   height: 14rem;
-
   width: 80%;
   margin-left: 10%;
 }
 .select-collection .btn-container {
   top: 11.6rem;
-/*  right: 4.120748%;
-*/  width: 200px;
+  width: 200px;
   position: static;
   right: 0;
   margin-top: 11.7rem;
@@ -101,8 +91,7 @@
   width: 78.666667%;
 }
 .collection-description-text {
-/*  top: 6.063rem;
-*/  margin-top: 1rem;
+  margin-top: 1rem;
   overflow: scroll;
   height: 7rem;
 }
@@ -143,4 +132,3 @@
 .scnshot-container .screenshot {
   margin-left: -52.27413%;
 }
-
