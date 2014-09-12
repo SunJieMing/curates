@@ -1094,7 +1094,7 @@ body {
   font-size: 1.25rem;
 }
 
-@media(max-width: 600px) {
+/*@media(max-width: 600px) {
   .btn-container .clone-btn,
   .btn-container .upvote-btn {
     width: 134.2857142857%;
@@ -1498,4 +1498,4 @@ body {
   .signin ._button {
     width: 45.104651%;
     margin-left: 29.02398%;
-  }
+  }*/

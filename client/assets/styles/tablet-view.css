@@ -7,7 +7,17 @@ a {
 .single-link .box {
   height: 8rem;
   width: 700%;
+}
 
+.link-votes-user {
+  position: relative;
+  float: right;
+  clear: both;
+  z-index: 14;
+  width: 15.8200385694%;
+  height: 5.563rem;
+  margin-top: -7.75rem;
+  right: -19%;
 }
 span {
   font-size: 80%;
@@ -53,12 +63,13 @@ span {
 
 .link-title-text span.ng-binding {
   font-size: 110%;
-
+  padding-left: 8%;
 }
 
 p.link-description-text.ng-binding {
   font-size: 100%;
   overflow: scroll;
+  padding-left: 8%;
 }
 
 .link-btn-container {
@@ -68,6 +79,6 @@ p.link-description-text.ng-binding {
   z-index: 7;
   width: 60px;
   height: 3.5rem;
-  margin-right: auto;
+  margin-right: -33%;
   float: right;
 }
