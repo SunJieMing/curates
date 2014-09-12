@@ -81,14 +81,13 @@
 }
 .select-collection {
   margin-top: 0.188rem;
-  height: 75%;
+  height: 14rem;
   width: 80%;
   margin-left: 10%;
 }
 .select-collection .btn-container {
   top: 11.6rem;
-/*  right: 4.120748%;
-*/  width: 200px;
+  width: 200px;
   position: static;
   right: 0;
   margin-top: 11.7rem;
@@ -121,4 +120,24 @@
   width: 50px;
   display: inline;
   clear: none;
+}
+.votes-box {
+  width: 89.975343%;
+  margin: 5.263rem auto 0;
+}
+.scnshot-container .box {
+  position: relative;
+  width: 750.284427%;
+}
+.link .box {
+  height: 8.188rem;
+}
+.box {
+  margin-left: -80%;
+}
+.link .screenshot {
+  margin-top: -6.8812rem;
+}
+.scnshot-container .screenshot {
+  margin-left: -52.27413%;
 }
