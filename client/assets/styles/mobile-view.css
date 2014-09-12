@@ -82,12 +82,14 @@
 .select-collection {
   margin-top: 0.188rem;
   height: 14rem;
+
   width: 80%;
   margin-left: 10%;
 }
 .select-collection .btn-container {
   top: 11.6rem;
-  width: 200px;
+/*  right: 4.120748%;
+*/  width: 200px;
   position: static;
   right: 0;
   margin-top: 11.7rem;
@@ -141,3 +143,4 @@
 .scnshot-container .screenshot {
   margin-left: -52.27413%;
 }
+
