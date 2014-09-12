@@ -23,3 +23,49 @@ span {
   margin-top: .965rem;
   margin-left: .5%;
 }
+.select-collection-1 {
+  margin-left: 18.66146%;
+  height: 10rem;
+}
+.btn-container .clone-btn, 
+.btn-container .upvote-btn {
+  width: 57px;
+  display: inline;
+  float: none;
+  clear: none;
+  margin-left: 0;
+  margin-top: 0;
+}
+.select-collection .btn-container {
+  margin-top: 8rem;
+  width: 100px;
+  margin-left: 43%;
+  position: static;
+}
+/*.select-collection .btn-container {
+  top: 11.6rem;
+  width: 200px;
+  position: static;
+  right: 0;
+  margin-top: 11.7rem;
+  margin-left: 33%;
+}
+.collection-title-text {
+  top: 0.5rem;
+  margin-left: -6%;
+  width: 78.666667%;
+}
+.collection-description-text {
+  margin-top: 1rem;
+  overflow: scroll;
+  height: 7rem;
+}
+
+.btn-container {
+  height: 1.5rem;
+}
+.clone-btn {
+  width: 50px;
+  display: inline;
+  clear: none;
+}*/
