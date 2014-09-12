@@ -7,6 +7,26 @@
   <link rel="stylesheet" href="assets/styles/linkview-grid.css">
   <link rel="stylesheet" href="assets/styles/styles.css">
   <body class="body index clearfix">
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<title>Curates</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="http://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="assets/styles/standardize.css">
+<link rel="stylesheet" href="assets/styles/linkview-grid.css">
+<link rel="stylesheet" href="assets/styles/styles.css">
+<meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px)" href="assets/styles/mobile-view.css">
+
+  <link rel="stylesheet" type="text/css" media="only screen and (min-width: 481px) and (max-width: 1024px)" href="assets/styles/tablet-view.css">
+
+<body ng-app="curates" class="body index clearfix">
+
+
+  <div id="status">
+  </div>
   <script src="lib/underscore/underscore.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
@@ -21,11 +41,20 @@
   <script src="services/collectionFactory.js"></script>
   <script src="services/auth/userManagementController.js"></script>
   <script src="services/auth/userManagementFactory.js"></script>
+  <script src="directives/collectionMeta.js"></script>
+  <script src="modules/createCollection/createCollection.js"></script>
+  <script src="directives/modal.controller.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
+
+
+
   <nav class="navbar"></nav>
   <p class="logotext logotext-1"><a ng-href='/'><span>Curates</span></a></p>
   <div ng-controller="AuthController">
   </div>
   <div ng-view></div>
   <div ui-view></div>
+
 </body>
+
 </html>

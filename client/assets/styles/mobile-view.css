@@ -4,7 +4,7 @@
   margin: 0;
   float: none;
   position: relative;
-  top: 0;
+  top: 54;
   left: 0;
   width: 100%;
   margin-bottom: 3rem;
@@ -25,31 +25,35 @@
 }
 .logotext {
   width: 39.1979166666%;
-  top: 7.5rem;
-  margin-left: 15%;
+  top: -0.5rem;
+  margin-left: -8%;
 }
 .signin {
-  left: 18rem;
-  top: 5rem;
+  margin-left: 23%;
+/*  left: 18rem;
+  top: 5rem;*/
 }
 #signin ._button {
-  width: 8rem;
-  position: relative;
+  width: 9rem;
+  margin-left: -36.97602%;
+  margin-top: -1.8rem;
+/*  position: relative;
   left: -17.59rem;
   top: -0.9rem;
+  margin-left: 2%;*/
 }
 .single-collection {
   width: 130.5%;
   height: 7rem;
-  margin-top: 5.563rem;
-  margin-left: 20.19792%;
+  margin-top: 1.563rem;
+  margin-left: 16.19792%;
 }
 .collection .collection-box {
-  height: 19rem;
-  width: 17rem;
+  height: 15.5rem;
+  width: 18rem;
 }
 .collection .collection-text {
-  margin-top: -18rem;
+  margin-top: -15.5rem;
   padding-left: 3%;
 }
 .collection .votes-user {
@@ -68,3 +72,75 @@
   display: block;
   margin-bottom: 5%;
 }
+.loggedIn {
+  position: absolute;
+  left: -250;
+}
+.collection-text .collection-description {
+  max-height: 7rem;
+}
+.select-collection {
+  margin-top: 0.188rem;
+  height: 14rem;
+
+  width: 80%;
+  margin-left: 10%;
+}
+.select-collection .btn-container {
+  top: 11.6rem;
+/*  right: 4.120748%;
+*/  width: 200px;
+  position: static;
+  right: 0;
+  margin-top: 11.7rem;
+  margin-left: 33%;
+}
+.collection-title-text {
+  top: 0.5rem;
+  margin-left: -6%;
+  width: 78.666667%;
+}
+.collection-description-text {
+/*  top: 6.063rem;
+*/  margin-top: 1rem;
+  overflow: scroll;
+  height: 7rem;
+}
+.btn-container .clone-btn, 
+.btn-container .upvote-btn {
+  width: 57px;
+  display: inline;
+  float: none;
+  clear: none;
+  margin-left: 0;
+  margin-top: 0;
+}
+.btn-container {
+  height: 1.5rem;
+}
+.clone-btn {
+  width: 50px;
+  display: inline;
+  clear: none;
+}
+.votes-box {
+  width: 89.975343%;
+  margin: 5.263rem auto 0;
+}
+.scnshot-container .box {
+  position: relative;
+  width: 750.284427%;
+}
+.link .box {
+  height: 8.188rem;
+}
+.box {
+  margin-left: -80%;
+}
+.link .screenshot {
+  margin-top: -6.8812rem;
+}
+.scnshot-container .screenshot {
+  margin-left: -52.27413%;
+}
+
