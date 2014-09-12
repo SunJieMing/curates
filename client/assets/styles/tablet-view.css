@@ -4,6 +4,21 @@
 a {
   font-size: 80%;
 }
+.single-link .box {
+  height: 8rem;
+  width: 700%;
+}
+
+.link-votes-user {
+  position: relative;
+  float: right;
+  clear: both;
+  z-index: 14;
+  width: 15.8200385694%;
+  height: 5.563rem;
+  margin-top: -7.75rem;
+  right: -19%;
+}
 span {
   font-size: 80%;
 }
@@ -25,7 +40,7 @@ span {
   margin-left: 18.66146%;
   height: 10rem;
 }
-.btn-container .clone-btn, 
+.btn-container .clone-btn,
 .btn-container .upvote-btn {
   width: 57px;
   display: inline;
@@ -39,4 +54,31 @@ span {
   width: 100px;
   margin-left: 43%;
   position: static;
+
+}
+.collection-description-text {
+  overflow: scroll;
+  height: 4rem;
+}
+
+.link-title-text span.ng-binding {
+  font-size: 110%;
+  padding-left: 8%;
+}
+
+p.link-description-text.ng-binding {
+  font-size: 100%;
+  overflow: scroll;
+  padding-left: 8%;
+}
+
+.link-btn-container {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 7;
+  width: 60px;
+  height: 3.5rem;
+  margin-right: -33%;
+  float: right;
 }
